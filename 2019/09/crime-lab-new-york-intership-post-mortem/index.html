@@ -133,6 +133,13 @@ Good Wobbles
 </div>
 
     
+<div class="blog-post-categories text-secondary">
+    <strong>Categories:</strong>
+    
+        <a class="badge badge-primary" href="/categories/articles">Articles</a>
+    
+</div>
+
     <hr>
 </header>
 <article class="blog-post">
@@ -142,15 +149,25 @@ Good Wobbles
 
 <p>Given just how much I&rsquo;ve learned this summer, I thought it might be beneficial to myself (and whomever might come across this blog/portfolio) to do a post-mortem of my time at CLNY. So, without further ado, let&rsquo;s begin!</p>
 
+<h2 id="a-brief-vague-summary-of-my-work">A brief, vague summary of my work</h2>
+
+<p>During my internship, I worked on two major projects, of which I split my time about <sup>50</sup>&frasl;<sub>50</sub>.</p>
+
+<p>The first was an internal toolset for generating features on the sorts of datasets that CLNY often handled - records of incidents over time. Many projects at CLNY involved generating time based features across large sets of records, and it was decided that a lot of time could be saved and errors prevented if the various projects in the lab all used the same toolset for doing this task rather than reinventing the wheel every time.</p>
+
+<p>The second was a predictive modeling project using police records. The goal of the project was to predict revictimization in certain subsets of incident types, with the end product hopefully being used to guide decisions in allocating resources. This project also served as a testing ground for the toolset that I was building.</p>
+
 <h2 id="lessons-learned">Lessons learned:</h2>
 
 <p><strong>Feature generation is a skill, and a very valuable one</strong></p>
 
 <p>Prior to this internship, I had worked with a fair bit of data over the course of my Master&rsquo;s as well as at Sagicor Life Insurance. However, almost all of the work that I did used the features already present in the dataset, with maybe a little bit of feature generation.</p>
 
-<p>Reading numerous professional data science and statistics blogs and articles, you&rsquo;ll undoubtedly read a lot about how important feature generation is. What I didn&rsquo;t read a lot about was how, exactly, to carry out generation of features.</p>
+<p>Reading numerous professional data science and statistics blogs and articles, you&rsquo;ll undoubtedly read a lot about how important feature generation is. What I didn&rsquo;t read a lot about was how, exactly, to carry out generation of features, and what questions you should be asking yourself in the feature generation process.</p>
 
-<p>For me, I came to understand feature generation as another step in the question asking process. Often, you want to have an idea of what sort of overall question you want to answer <em>before</em> you seek out a dataset. But once you have the dataset, there&rsquo;s several classes of questions you can ask about your dataset, guided by your original query. Some of these include:</p>
+<p>Feature generation is fundamentally about interrogating your dataset. It&rsquo;s vital for building a predictive model, but thinking about the predictive model as the end goal at this step can be a little bit misleading. The focus here should be <em>what questions can we ask about this data?</em></p>
+
+<p>Often, you want to have an idea of what sort of overall question you want to answer <em>before</em> you seek out a dataset. But once you have the dataset, there&rsquo;s several classes of questions you can ask about your dataset, guided by your original query. Some of these include:</p>
 
 <ul>
 <li>How many times has an event of this sort happened before?</li>
@@ -162,7 +179,7 @@ Good Wobbles
 <li>What&rsquo;s the minimum/maximum value that this objective achieved in column X?</li>
 </ul>
 
-<p>There&rsquo;s countless questions of this type that can be asked of a dataset. The type of data that you have will very much affect what questions you can ask - obviously, you&rsquo;d be asking entirely different questions about image data or sound data. The point is, the data we have usually has a great deal more information embedded in it than is immediately apparent from the set of columns presented to us. To access that information, we have to do some work.</p>
+<p>There&rsquo;s countless queries of this type that can be asked of a dataset. The type of data that you have will very much affect what questions you can ask - obviously, you&rsquo;d be asking entirely different questions about image data or sound data. The point is, the data we have usually has a great deal more information embedded in it than is immediately apparent from the set of columns presented to us. To access that information, we have to do some work.</p>
 
 <p><strong>Any one dataset or set of datasets can be used to make predictions at a variety of levels</strong></p>
 
@@ -176,7 +193,7 @@ Good Wobbles
 
 <p><strong>Organizing early and organizing consistently can be your best friend</strong></p>
 
-<p>Prior to working at CLNY, I had only used git in passing (mostly to host things on github), had never touched a makefile, and had rarely if ever thought about the organizational structure of my projects.</p>
+<p>Prior to working at CLNY, I had only used git in passing (mostly to host things on github), had never touched a makefile, and had only rarely thought about the organizational structure of my projects. I was a stickler about organizing my code <em>inside code files</em> - but very bad at organizing the files themselves!</p>
 
 <p>My first day at CLNY, I was provided with a slew of materials to read and watch for how to properly manage a data science project. These proved invaluable, and the techniques I learned here I&rsquo;ve since implemented in all of my personal projects.</p>
 
@@ -184,7 +201,7 @@ Good Wobbles
 
 <p>Organization fixes this problem almost entirely. Separating every major step of your project out into its own files and folders, with well defined relations, makes building on the project later profoundly easier. It should be possible to look at the file structure of your project and know more or less immediately what the steps in your data science pipeline are. You may not know the technical details of every step, but you know <em>what</em> is going on without having to open up code files and read.</p>
 
-<p>I highly recommend</p>
+<p>I highly recommend <a href="https://www.youtube.com/watch?v=ZSunU9GQdcI">this talk by Dr. Patrick Ball</a> for a pretty solid introduction to organizational principles for data science pipelines.</p>
 
 <h2 id="some-mistakes-i-made">Some mistakes I made:</h2>
 
@@ -211,6 +228,29 @@ Good Wobbles
 <p>Fixing this problem involved going back and examining the ways the data was originally loaded and merged (see #2), then modifying it and carrying out a lot of deduplication and data cleaning to get the dataset to a single level.</p>
 
 <p>Doing this work ultimately sped up my productivity a great deal. But a lot of time was wasted prior to this just because I hadn&rsquo;t spend adequate time early on understanding my data and the work done before I came onboard.</p>
+
+<h2 id="some-things-that-clny-did-right">Some things that CLNY did right:</h2>
+
+<p>I was very often surprised at CLNY by the degree of flexibility afforded to me and other employees. The lab has an open office plan, a kitchen, two conference rooms, and a couple of private offices. People often held conversations intermittently, I frequently saw people going to whiteboards to work out problems, people frequently ate extended lunches together, and people frequently came and went from the office or went to different parts of the office to work. Scheduling seemed relatively loose. All of this made for a very comfortable work environment. My understanding is that a lot of these things are relatively normal in some organizations, but it hasn&rsquo;t been normal in my experience thus far.</p>
+
+<p>I do think that this environment worked specifically because the managers/research directors <em>made</em> it work. Here&rsquo;s what I mean:
+1. Many projects, including mine, had weekly check-ins where at least two or three other people were updated as to your progress. My manager rarely looked at my work directly - another coworker conducted code reviews for me (and I will be forever grateful for her many suggestions!) - but he was regularly updated on my progress.
+2. Code reviews happened regularly, and were facilitated by CLNY&rsquo;s internal gitlab. I could have as many conversations and long lunches as I wanted - but at the end of the day, it would be plainly obvious to multiple people if I wasn&rsquo;t getting work done, because there wouldn&rsquo;t be commits.
+3. The environment was very academic. While people frequently conversed, they were frequently conversing about topics related to work. I went to lunch with one of my coworkers several times a week, but those lunch times often felt profoundly productive, because we were discussing statistics, economics, coding, and data science. The lab frequently brought in outside speakers to give a talk over our lunch breaks as well, further facilitating an academic environment.</p>
+
+<p>All of this is to say, CLNY created an environment where it was easy to be relaxed <em>and</em> productive. A direct consequence of this is that it was an environment where it was easy to <em>learn</em>.</p>
+
+<h2 id="last-thoughts">Last thoughts:</h2>
+
+<p>I can honestly say that this summer has been one of the most productive times of my life. During my master&rsquo;s coursework, I would not have guessed at the sort of obstacles that I ran into while working on my projects this summer.</p>
+
+<p>An unfortunate effect of the way that a lot of academic programs in data science and statistics work is that students are rarely put up against anything resembling the kind of problems they&rsquo;ll face in real world projects. I learned a lot about linear models, hypothesis testing, mathematical statistics, probability theory, et cetera, during my master&rsquo;s, but very little about how to manage data.</p>
+
+<p>This sort of makes sense - a work environment seems a bad place to have to learn the linear algebra underpinning regression models or how random variables work or what a Markov Chain is. I do think more could be done to give students opportunities to face these sorts of obstacles prior to entering the workforce.</p>
+
+<p>I&rsquo;ve been fortunate in my career thus far to consistently have awesome coworkers and mentors. I&rsquo;ve received a lot of advice and been pointed towards a lot of very interesting material (some of which I hope to be sharing on this blog in the near future) by my coworkers and my supervisor. I&rsquo;ve also been fortunate that my coworkers have been very forgiving - they&rsquo;ve been privy to all of my many technical mistakes, and have always treated them as learning opportunities. I&rsquo;ve been in environments where that was not the culture, and I can say that this way of doing things is much better. In general, a mistake should be something you learn from, not something you&rsquo;re ashamed of.</p>
+
+<p>Thanks for reading!</p>
 
 
     
@@ -265,6 +305,8 @@ Good Wobbles
         
         <h4>Categories</h4>
         <p>
+            
+            <a class="badge badge-primary" href="/categories/articles">articles</a>
             
             <a class="badge badge-primary" href="/categories/projects">projects</a>
             

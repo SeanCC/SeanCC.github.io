@@ -6,13 +6,13 @@
     <loc>/es/categories/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="de"
-                href="/de/categories/"
+                hreflang="en"
+                href="/categories/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="/categories/"
+                hreflang="de"
+                href="/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
