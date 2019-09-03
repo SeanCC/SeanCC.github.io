@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Good Wobbles</title>
+    <title>Charlie Carter&#39;s Portfolio &amp; Blog</title>
     <link>/</link>
-    <description>Recent content on Good Wobbles</description>
+    <description>Recent content on Charlie Carter&#39;s Portfolio &amp; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Sep 2019 17:51:49 -0400</lastBuildDate>
@@ -29,6 +29,16 @@ Given just how much I&amp;rsquo;ve learned this summer, I thought it might be be
       <guid>/1/01/a-quick-dd-experiment/</guid>
       <description>Just a quick experiment I was curious about! A few friends and I are starting up a new D&amp;amp;D campaign, and a player asked me how I prefer stats for characters to be determined. I&amp;rsquo;ve always preferred point buying, but I enjoy the randomness of rolling stats. I ran some simulations to get an idea of what kind of stat distributions different rolling methods give!
 First, we define our functions for generating stats.</description>
+    </item>
+    
+    <item>
+      <title>About Charlie!</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hi! You&amp;rsquo;ve found my blog/portfolio! I&amp;rsquo;m Sean Carter - but I usually go by Charlie. I&amp;rsquo;m currently a graduate student in Statistics at the University of South Florida.
+Over the years, I&amp;rsquo;ve found that many projects that I work on eventually get &amp;ldquo;lost to the void&amp;rdquo;. I wanted to have a place where I could put any interesting work that I do so I can refer back to it later and share it with other people.</description>
     </item>
     
     <item>
@@ -71,16 +81,6 @@ As a way of learning more about networks, I investigated algorithms for generati
       <guid>/1/01/random-walkers-and-web-crawlers/</guid>
       <description>Brief Overview: This was put together for a class assignment in Probability Theory 2. We were to discuss random walks and how they relate to the PageRank algorithm.
 An overview of the relevant mathematics is given, and a small web crawler is implemented to collect links between wikipedia articles. The links are saved in a SQLite database and used later to construct a graph and rank articles based on centrality.</description>
-    </item>
-    
-    <item>
-      <title>Whose Wobbles Are Wholesome And Good</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Hi! You&amp;rsquo;ve found the blog/portfolio of Sean Carter! I&amp;rsquo;m a graduate student in Statistics at the University of South Florida.
-Over the years, I&amp;rsquo;ve found that many projects that I work on eventually get &amp;ldquo;lost to the void&amp;rdquo;. I wanted to have a place where I could put any interesting work that I do so I can refer back to it later and share it with other people. This is basically the home of all of my projects going forward.</description>
     </item>
     
   </channel>
