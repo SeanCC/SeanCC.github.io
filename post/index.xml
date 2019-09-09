@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Charlie&#39;s Portfolio &amp; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Sep 2019 17:51:49 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Visualizing NYC Department of Corrections Daily Inmate Records</title>
+      <link>/2019/09/visualizing-nyc-department-of-corrections-daily-inmate-records/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/visualizing-nyc-department-of-corrections-daily-inmate-records/</guid>
+      <description>In March of 2012, then Mayor of New York City Michael Bloomberg signed into law an amendment to city code mandating that all &amp;ldquo;public data&amp;rdquo; be made available on a single public portal: NYC Open Data. A neat summary of the history behind the law and legislation like it can be found in this 2017 article for govtech.com.
+Since then, public data out of NYC has been used in a slew of neat projects.</description>
+    </item>
     
     <item>
       <title>Crime Lab New York Intership: Post-Mortem</title>
