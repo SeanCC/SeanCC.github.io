@@ -41,7 +41,7 @@
     <item>
       <title>experience</title>
       <link>/tags/experience/</link>
-      <pubDate>Mon, 02 Sep 2019 17:51:49 -0400</pubDate>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/experience/</guid>
       <description></description>
@@ -50,7 +50,7 @@
     <item>
       <title>internship</title>
       <link>/tags/internship/</link>
-      <pubDate>Mon, 02 Sep 2019 17:51:49 -0400</pubDate>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/internship/</guid>
       <description></description>
@@ -59,7 +59,7 @@
     <item>
       <title>post-mortem</title>
       <link>/tags/post-mortem/</link>
-      <pubDate>Mon, 02 Sep 2019 17:51:49 -0400</pubDate>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/post-mortem/</guid>
       <description></description>
@@ -102,20 +102,20 @@
     </item>
     
     <item>
+      <title>random graphs</title>
+      <link>/tags/random-graphs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/random-graphs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>random walks</title>
       <link>/tags/random-walks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/tags/random-walks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>random-graphs</title>
-      <link>/tags/random-graphs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/random-graphs/</guid>
       <description></description>
     </item>
     
