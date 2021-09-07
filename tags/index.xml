@@ -6,34 +6,7 @@
     <description>Recent content in Tags on Charlie Carter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://seancc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>plotly</title>
-      <link>https://seancc.github.io/tags/plotly/</link>
-      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seancc.github.io/tags/plotly/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>projects</title>
-      <link>https://seancc.github.io/tags/projects/</link>
-      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seancc.github.io/tags/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>visualization</title>
-      <link>https://seancc.github.io/tags/visualization/</link>
-      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://seancc.github.io/tags/visualization/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 08 Sep 2019 17:51:49 -0400</lastBuildDate><atom:link href="https://seancc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>crime data</title>
       <link>https://seancc.github.io/tags/crime-data/</link>
@@ -49,6 +22,15 @@
       <pubDate>Sun, 08 Sep 2019 17:51:49 -0400</pubDate>
       
       <guid>https://seancc.github.io/tags/open-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualization</title>
+      <link>https://seancc.github.io/tags/visualization/</link>
+      <pubDate>Sun, 08 Sep 2019 17:51:49 -0400</pubDate>
+      
+      <guid>https://seancc.github.io/tags/visualization/</guid>
       <description></description>
     </item>
     
@@ -85,6 +67,15 @@
       <pubDate>Mon, 02 Sep 2019 17:51:49 -0400</pubDate>
       
       <guid>https://seancc.github.io/tags/post-mortem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>https://seancc.github.io/tags/projects/</link>
+      <pubDate>Mon, 02 Sep 2019 17:51:49 -0400</pubDate>
+      
+      <guid>https://seancc.github.io/tags/projects/</guid>
       <description></description>
     </item>
     
