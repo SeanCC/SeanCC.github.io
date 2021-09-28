@@ -8,7 +8,7 @@
 A survival analysis is conducted on the OpenPowerlifting.org dataset. Individual powerlifters and the length of time that they&rsquo;ve been active (in terms of time from first to last meet and number of meets attended) are treated as survival objects. Survival curves are fitted and covariates are examined for effects.
 This project was completed in part as a semester project for a Reliability Data Analysis course at the University of South Florida."><meta itemprop="datePublished" content="2019-09-02T17:51:49-04:00" />
 <meta itemprop="dateModified" content="2019-09-02T17:51:49-04:00" />
-<meta itemprop="wordCount" content="2330">
+<meta itemprop="wordCount" content="2237">
 <meta itemprop="keywords" content="projects,survival-analysis,sports," /><meta property="og:title" content="An Analysis of the Competitive Lifetime of Powerlifters" />
 <meta property="og:description" content="Brief overview
 A survival analysis is conducted on the OpenPowerlifting.org dataset. Individual powerlifters and the length of time that they&rsquo;ve been active (in terms of time from first to last meet and number of meets attended) are treated as survival objects. Survival curves are fitted and covariates are examined for effects.
@@ -88,10 +88,9 @@ This project was completed in part as a semester project for a Reliability Data 
 			<div class="markdown">
 				<p><strong>Brief overview</strong></p>
 <p>A survival analysis is conducted on the OpenPowerlifting.org dataset. Individual powerlifters and the length of time that they&rsquo;ve been active (in terms of time from first to last meet and number of meets attended) are treated as survival objects. Survival curves are fitted and covariates are examined for effects.</p>
-<p>This project was completed in part as a semester project for a Reliability Data Analysis course at the University of South Florida. This project was completed with the help of, and shared with the permission of, Kheycie Romero (instagram: &hellip; )</p>
-<p><em>Note: This project is ongoing - some of the code for reproducing results seen below was lost and is being rewritten, and I&rsquo;m working on doing more with this data in my free time. Feel free to send any thoughts or suggestions my way, and check out the data yourself at OpenPowerlifting.org</em></p>
+<p>This project was completed in part as a semester project for a Reliability Data Analysis course at the University of South Florida. This project was completed with the help of my project partner, Kheycie Romero .</p>
 <p><strong>Introduction</strong></p>
-<p>If you practice a sport long enough, it is inevitable that you will see new people come and go. A common observation in Brazilian Jiu Jitsu is that of the &ldquo;blue belt blues&rdquo; - people who get their blue belt - the second belt (or the first major belt promotion) - and then stop showing up to classes not long afterwards.</p>
+<p>If you practice a sport long enough, it is inevitable that you will see new people come and go. A common observation in Brazilian Jiu Jitsu is that of the &ldquo;blue belt blues&rdquo; - people who get their blue belt (the first major belt promotion) and then stop showing up to classes not long afterwards.</p>
 <p>With any sport, the risk of injury and the pressures that come with age and its responsibilities will, over time, cause people to drop out of the sport. OpenPowerlifting.org provides a dataset that allows us to examine this phenomenom in surprising depth for the sport of Powerlifting.</p>
 <p><strong>Data Exploration &amp; Feature Engineering</strong></p>
 <p>Our starting dataset consists of 822,869 observations. Each row represents the performance of a single powerlifter in a single event at a single powerlifting meet. Each row gives a powerlifter name, sex, age, age class, bodyweight, weight class, country of origin, and the following information about the event: an abbreviation giving event type, the event division, the event country, the event federation, the date of the event, the state of the event, the meet name, the Wilks, McCulloch, and Glossbrenner scores for their performances, and their performances in various lifts.</p>
@@ -148,7 +147,6 @@ This project was completed in part as a semester project for a Reliability Data 
 </div>
 <p>A few notes about the above: working with Dates in R is not as easy as one would like, particularly when having to work with lists of dates. Unlisting dates automatically converts them to a numeric format that uses 1970-01-01 as the origin. However, to use &ldquo;as.Date()&rdquo; on a date, you <em>must</em> specify the origin, and if you specify the origin incorrectly (i.e. if you do not know the default date), the dates will be incorrect. You&rsquo;ll also note that everything was done using the vectorized lapply function - this turned out to be simpler than trying to use apply over each row of the dataframe.</p>
 <p>The dataframe created above is sufficient to generate survival objects. Our final step was to collect covariates using similar methods as above.</p>
-<p>&hellip;</p>
 <p>After collecting covariates, we omitted all rows that had NA&rsquo;s. This is not generally a great practice and we could work around rows with NA&rsquo;s, but we have so much data here that it shouldn&rsquo;t be a significant issue.</p>
 <p>We generated age classes (so that we could treat age as a categorical rather than continuous variable - a sacrifice that proves useful when creating survival plots):</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -174,10 +172,8 @@ This project was completed in part as a semester project for a Reliability Data 
 <p>We first carry out a non-parametric analysis of our survival data by creating a Kaplan-Meier Product Limit Estimator (KMPLE) table and curve for both forms of lifetime. These can be seen below. Note that for the Years KMPLE plot, a slight modification was made that is not visible presently in the tables: anyone who attended only one meet would appear as active for 0.00 years, which was adjusted to 0.083 years (1 month) when creating survival objects. The <em>surv</em> package in R does not allow survival times of 0.00.</p>
 <p><img src="/posts/images/meetsKMPLE.png" alt="Meets KMPLE"></p>
 <p><img src="/posts/images/yearsKMPLE.png" alt="Years KMPLE"></p>
-<p>We also go ahead and remove some outliers that we expect will cause problems for our analysis. A few examples of these are shown below:</p>
-<p>&hellip;</p>
 <p>Finally, we do a preliminary fit of some common parametric curves to examine if any of these fit the data well. These can be seen below:</p>
-<p><img src="Table_Final.png" alt="Preliminary parametric fit"></p>
+<p><img src="/posts/images/Table_Final.png" alt="Preliminary parametric fit"></p>
 <p>Each of the curves show significant regions of misfit. Given that none of the common parametric curves are a good fit for the data alone, we next want to examine covariates, and may thereafter conduct a semi-parametric analysis.</p>
 <p><strong>Examining Covariates</strong></p>
 <p>We next want to identify and examine our covariates. The most obvious covariates are the biological ones: gender, age, and bodyweight. Feature engineering may present new covariates, such as the performance of the powerlifter at their first meet, the frequency of meet attendance, change in biological variables (e.g. moving to a new bodyweight or age class), et cetera.</p>
@@ -382,7 +378,7 @@ meet_fit_parametrics <span style="color:#f92672">&lt;-</span> <span style="color
 </tbody>
 </table>
 <p>These look better than the parametric plots we produced at the beginning. The cutoff was picked more or less by eyeballing it - we could likely do better than this. The fits definitely aren&rsquo;t perfect, but they are suggestive - after some cutoff, the exponential distribution appears to be the best fit, which implies a constant hazard rate after some threshold.</p>
-<p><strong>Intermittent Conclusions and Next Steps</strong></p>
+<p><strong>Conclusions and Next Steps</strong></p>
 <p>We haven&rsquo;t arrived at a final model yet. We have, however, arrived at a few important conclusions:</p>
 <ol>
 <li>
@@ -395,7 +391,7 @@ meet_fit_parametrics <span style="color:#f92672">&lt;-</span> <span style="color
 <p>We have some evidence that the exponential distribution is more explanatory after some threshold cutoff, implying a constant hazard rate after that point. This falls in line with intuition - we&rsquo;d expect a lot of people to try out the sport and quit not long after, leading to a lot of drop-off early on that levels off later.</p>
 </li>
 </ol>
-<p>Going forward, more work is going to be carried out in:</p>
+<p>Going forward, more work could be carried out in:</p>
 <ol>
 <li>
 <p>Engineering more covariates, whether by collecting data from additional sources or examining the present dataset for more features. We spent relatively little time on feature engineering at the beginning. It is likely to be worthwhile to go back to that soon.</p>
